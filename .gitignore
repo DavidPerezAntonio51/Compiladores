@@ -3,6 +3,7 @@
 
 # Log file
 *.log
+/Analizador Lexico/.idea/
 
 # BlueJ files
 *.ctxt
