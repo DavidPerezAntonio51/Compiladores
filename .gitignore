@@ -3,7 +3,11 @@
 
 # Log file
 *.log
+#
 /Analizador Lexico/.idea/
+/Analizador Lexico/target/
+/Analizador Lexico/.idea/misc.xml
+/Analizador Lexico/.idea/workspce.xml
 
 # BlueJ files
 *.ctxt
