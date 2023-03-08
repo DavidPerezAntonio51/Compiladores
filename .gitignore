@@ -3,7 +3,7 @@
 
 # Log file
 *.log
-#
+#carpetas que no se van a subir del analizador lexico
 /Analizador Lexico/.idea/
 /Analizador Lexico/target/
 /Analizador Lexico/.idea/misc.xml
