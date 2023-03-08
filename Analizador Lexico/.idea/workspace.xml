@@ -5,24 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1c84f0b-28bf-4278-9285-d6008eba6ed2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/Interprete.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/AFDManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Automata.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Cadenas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Identificador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Numeros.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Simbolos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/TipoAFD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/CharArrayManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/Escaner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/TipoToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/Token.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mx/ipn/escom/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +68,7 @@
       <command value="mvn verify" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Interprete">
+  <component name="RunManager" selected="Application.InterpreteFile">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -151,7 +134,7 @@
       <workItem from="1678056128797" duration="8237000" />
       <workItem from="1678121260395" duration="1412000" />
       <workItem from="1678142258694" duration="49000" />
-      <workItem from="1678223440975" duration="22918000" />
+      <workItem from="1678223440975" duration="25280000" />
     </task>
     <servers />
   </component>
