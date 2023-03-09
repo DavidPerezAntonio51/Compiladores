@@ -65,7 +65,10 @@ public class Comentarios implements Automata {
                     if(next=='/'){
                         lexema = lexema.concat(String.valueOf(next));
                         status=7;
-                    }else{
+                    } else if (next=='*') {
+                        lexema = lexema.concat(String.valueOf(next));
+                        status=4;
+                    } else{
                         lexema = lexema.concat(String.valueOf(next));
                         status = 3;
                     }
@@ -89,6 +92,16 @@ public class Comentarios implements Automata {
                 continuar=false;
                 tipoToken = TipoToken.COMENTARIOS;
                 wraper = Optional.of(lexema);
+            }
+            if(!manager.hasNext()&&status==2){
+                continuar = false;
+                tipoToken = TipoToken.COMENTARIOS;
+                wraper = Optional.of(lexema);
+            }
+            if(!manager.hasNext()&&status==3){
+                continuar = false;
+                tipoToken = TipoToken.COMENTARIOS;
+                wraper = Optional.empty();
             }
         }
         return wraper;

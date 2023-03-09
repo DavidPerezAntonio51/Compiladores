@@ -5,19 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1c84f0b-28bf-4278-9285-d6008eba6ed2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Comentarios.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Operadores.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/Interprete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/Interprete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/AFDManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/AFDManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Automata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Automata.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Cadenas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Cadenas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Identificador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Identificador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Numeros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Numeros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Comentarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Comentarios.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Simbolos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Simbolos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/TipoAFD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/TipoAFD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/Escaner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/Escaner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/TipoToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/TipoToken.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +136,9 @@
       <workItem from="1678056128797" duration="8237000" />
       <workItem from="1678121260395" duration="1412000" />
       <workItem from="1678142258694" duration="49000" />
-      <workItem from="1678223440975" duration="42106000" />
+      <workItem from="1678223440975" duration="42234000" />
+      <workItem from="1678378696756" duration="516000" />
+      <workItem from="1678401826127" duration="1982000" />
     </task>
     <servers />
   </component>
@@ -167,51 +159,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Comentarios.java</url>
-          <line>74</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Comentarios.java</url>
-          <line>78</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Comentarios.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Comentarios.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Comentarios.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Comentarios.java</url>
-          <line>93</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/Escaner.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/Escaner.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/Escaner.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/CharArrayManager.java</url>
           <line>4</line>

@@ -21,7 +21,7 @@ public class Simbolos implements Automata{
         simbolos.put("[",TipoToken.CORCHETE_IZQUIERDO);
         simbolos.put("]",TipoToken.CORCHETE_DERECHO);
         simbolos.put("(",TipoToken.PARENTESIS_IZQUIERDO);
-        simbolos.put(")",TipoToken.CORCHETE_DERECHO);
+        simbolos.put(")",TipoToken.PARENTESIS_DERECHO);
         simbolos.put(",",TipoToken.COMA);
         simbolos.put(".",TipoToken.PUNTO);
         simbolos.put(";",TipoToken.PUNTO_Y_COMA);
