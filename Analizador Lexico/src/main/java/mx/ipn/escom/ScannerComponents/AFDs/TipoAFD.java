@@ -5,6 +5,7 @@ public enum TipoAFD {
     CADENA,
     NUMEROS,
     SIMBOLO_SIMPLE,
+    COMENTARIOS_Y_SLASH,
     OPERADOR_RELACIONAL,
     NINGUNO
 }

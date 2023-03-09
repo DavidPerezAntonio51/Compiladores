@@ -5,6 +5,7 @@ import mx.ipn.escom.ScannerComponents.TipoToken;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class Simbolos implements Automata{
     private final CharArrayManager manager;
@@ -14,7 +15,6 @@ public class Simbolos implements Automata{
         simbolos = new HashMap<>();
         simbolos.put("+",TipoToken.SUMA);
         simbolos.put("-",TipoToken.RESTA);
-        simbolos.put("/",TipoToken.DIVISION);
         simbolos.put("*",TipoToken.MULTIPLICACION);
         simbolos.put("{",TipoToken.LLAVE_IZQUIERDA);
         simbolos.put("}",TipoToken.LLAVE_DERECHA);
@@ -32,9 +32,9 @@ public class Simbolos implements Automata{
     }
 
     @Override
-    public String getLexema() {
+    public Optional<String> getLexema() {
         simbolo = manager.getNextChar();
-        return String.valueOf(simbolo);
+        return Optional.of(String.valueOf(simbolo));
     }
 
     @Override

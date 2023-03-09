@@ -41,5 +41,6 @@ public enum TipoToken {
     IDENTIFICADOR,
     CADENA,
     NUMERO,
+    COMENTARIOS,//no se va generar pero es necesario
     EOF
 }

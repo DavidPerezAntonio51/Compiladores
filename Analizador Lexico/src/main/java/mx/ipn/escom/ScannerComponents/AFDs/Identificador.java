@@ -3,6 +3,8 @@ package mx.ipn.escom.ScannerComponents.AFDs;
 import mx.ipn.escom.ScannerComponents.CharArrayManager;
 import mx.ipn.escom.ScannerComponents.TipoToken;
 
+import java.util.Optional;
+
 
 public class Identificador implements Automata{
     private final CharArrayManager manager;
@@ -10,7 +12,7 @@ public class Identificador implements Automata{
         this.manager=manager;
     }
     @Override
-    public String getLexema(){
+    public Optional<String> getLexema(){
         String lexema = "";
         boolean continuar = true;
         while (manager.hasNext()&&continuar) {
@@ -22,7 +24,7 @@ public class Identificador implements Automata{
                 manager.backPosition();
             }
         }
-        return lexema;
+        return Optional.of(lexema);
     }
 
     @Override

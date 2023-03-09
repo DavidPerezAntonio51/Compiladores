@@ -1,7 +1,9 @@
 package mx.ipn.escom.ScannerComponents;
 
+import mx.ipn.escom.Interprete;
 import mx.ipn.escom.ScannerComponents.AFDs.AFDManager;
 import mx.ipn.escom.ScannerComponents.AFDs.Automata;
+import mx.ipn.escom.ScannerComponents.AFDs.Comentarios;
 import mx.ipn.escom.ScannerComponents.AFDs.TipoAFD;
 
 import java.util.*;
@@ -14,7 +16,7 @@ public class Escaner {
 
     private final List<Token> tokens;
 
-    private int linea = 1;
+    public static int linea = 1;
 
     private static final Map<String, TipoToken> palabrasReservadas;
 
@@ -49,16 +51,31 @@ public class Escaner {
         //Aquí va el corazón del scanner.
         while (manager.hasNext()) {
             char nextChar = manager.getNextChar();
-            ;
             TipoAFD type = AUTOMATAS.checkType(nextChar);
             Optional<Automata> automata = AUTOMATAS.getAFD(type);
             if (automata.isPresent()) {
                 manager.backPosition();
-                String lexema = automata.get().getLexema();
-                if (palabrasReservadas.containsKey(lexema)) {
-                    tokens.add(new Token(palabrasReservadas.get(lexema), lexema, automata.get().getLiteral(), linea));
+                Optional<String> lexema = automata.get().getLexema();
+                if (lexema.isPresent()) {
+                    if (palabrasReservadas.containsKey(lexema.get())) {
+                        tokens.add(new Token(palabrasReservadas.get(lexema.get()), lexema.get(), automata.get().getLiteral(), linea));
+                    } else {
+                        if (automata.get().getTipoToken() != TipoToken.COMENTARIOS) {
+                            tokens.add(new Token(automata.get().getTipoToken(), lexema.get(), automata.get().getLiteral(), linea));
+                        }else{
+                            Comentarios comentarios = (Comentarios) automata.get();
+                            linea+=comentarios.getAumento();
+                        }
+                    }
                 } else {
-                    tokens.add(new Token(automata.get().getTipoToken(), lexema, automata.get().getLiteral(), linea));
+                    String mensaje = switch (automata.get().getTipoToken()) {
+                        case CADENA -> "Cadena mal introducida";
+                        case NUMERO -> "Numero mal introducido";
+                        case COMENTARIOS -> "Comentario mal escrito";
+                        default ->
+                                throw new IllegalStateException("Unexpected value: " + automata.get().getTipoToken());
+                    };
+                    Interprete.error(linea, mensaje);
                 }
             }
             if (nextChar == '\n') {
