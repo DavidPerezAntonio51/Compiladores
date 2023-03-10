@@ -100,6 +100,10 @@ public class Numeros implements Automata {
                 continuar = false;
                 manager.backPosition();
             }
+            if((!manager.hasNext()&&status==3)||(!manager.hasNext()&&status==1)||!manager.hasNext()&&status==6){
+                continuar= false;
+                wraper = Optional.of(lexema);
+            }
         }
         literal = lexema;
         return wraper;
