@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f1c84f0b-28bf-4278-9285-d6008eba6ed2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Numeros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Numeros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Operadores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Operadores.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +69,7 @@
       <command value="mvn verify" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.InterpreteFile">
+  <component name="RunManager" selected="Application.Interprete">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -138,7 +138,8 @@
       <workItem from="1678223440975" duration="42234000" />
       <workItem from="1678378696756" duration="516000" />
       <workItem from="1678401826127" duration="2150000" />
-      <workItem from="1678482648740" duration="1060000" />
+      <workItem from="1678482648740" duration="1593000" />
+      <workItem from="1678485032938" duration="2077000" />
     </task>
     <servers />
   </component>

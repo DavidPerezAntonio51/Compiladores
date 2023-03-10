@@ -62,6 +62,10 @@ public class Operadores implements Automata{
                 manager.backPosition();
                 this.lexema = lexema;
             }
+            if(status==1&& !manager.hasNext()){
+                wraper = Optional.of(lexema);
+                this.lexema = lexema;
+            }
         }
         return wraper;
     }
