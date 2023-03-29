@@ -5,7 +5,7 @@ public enum TipoToken {
     CLASS,
     ELSE,
     FALSE,
-    BREAK,
+    FOR,
     FUNCTION,
     IF,
     NULL,

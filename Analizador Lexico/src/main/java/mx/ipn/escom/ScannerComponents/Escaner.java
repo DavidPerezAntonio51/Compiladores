@@ -26,7 +26,7 @@ public class Escaner {
         palabrasReservadas.put("clase", TipoToken.CLASS);
         palabrasReservadas.put("ademas", TipoToken.ELSE);
         palabrasReservadas.put("falso", TipoToken.FALSE);
-        palabrasReservadas.put("para", TipoToken.BREAK);
+        palabrasReservadas.put("para", TipoToken.FOR);
         palabrasReservadas.put("fun", TipoToken.FUNCTION); //definir funciones
         palabrasReservadas.put("si", TipoToken.IF);
         palabrasReservadas.put("nulo", TipoToken.NULL);
