@@ -22,7 +22,7 @@ Las palabras reservadas que puede detectar el analizador léxico son:
 |ademas|`else`|palabra para el caso en que no se cumpla la condicion if|
 |falso|`false`|valor boleano|
 |verdadero|`true`|valor boleano|
-|para|`break`|palbra que proporciona una salida forzada|
+|para|`for`|palabra reservada para bucle|
 |nulo|`null`|ausencia de valor|
 |imprimir|`print`|palabra para una función de impresión|
 |retornar|`return`|retorno de un valor|
