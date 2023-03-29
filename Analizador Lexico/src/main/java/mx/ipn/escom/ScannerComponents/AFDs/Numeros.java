@@ -116,6 +116,6 @@ public class Numeros implements Automata {
 
     @Override
     public Object getLiteral() {
-        return literal;
+        return Double.parseDouble((String)literal);
     }
 }

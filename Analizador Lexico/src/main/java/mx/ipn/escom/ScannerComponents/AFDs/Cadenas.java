@@ -42,6 +42,6 @@ public class Cadenas implements Automata {
 
     @Override
     public Object getLiteral() {
-        return literal;
+        return (String)literal;
     }
 }
