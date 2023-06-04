@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1c84f0b-28bf-4278-9285-d6008eba6ed2" name="Changes" comment="Se crea analizador sintactico descendente no recursivo">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f1c84f0b-28bf-4278-9285-d6008eba6ed2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ParserComponents/ParseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ParserComponents/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Analizador Sintactico/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Analizador Sintactico/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -69,7 +71,7 @@
       <command value="mvn verify" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Interprete">
+  <component name="RunManager" selected="Application.InterpreteFile">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -105,7 +107,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="mx.ipn.escom.Interprete" />
-      <module name="Analizador Sintactico" />
+      <module name="Analizador Sintactico Proyecto" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -114,7 +116,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="mx.ipn.escom.Interprete" />
-      <module name="Analizador Sintactico" />
+      <module name="Analizador Sintactico Proyecto" />
       <option name="PROGRAM_PARAMETERS" value="&quot;D:\OneDrives\OneDrive - Instituto Politecnico Nacional\ESCOM\Compiladores\source.dezk&quot;" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -157,25 +159,12 @@
       <workItem from="1680457453179" duration="42000" />
       <workItem from="1680539550401" duration="1467000" />
       <workItem from="1680617727008" duration="659000" />
-      <workItem from="1684360849300" duration="817000" />
-      <workItem from="1684361816869" duration="1264000" />
-      <workItem from="1684364383848" duration="13466000" />
-      <workItem from="1684526151741" duration="11853000" />
-      <workItem from="1684770032874" duration="13000" />
-      <workItem from="1684964567341" duration="1230000" />
-      <workItem from="1685411866498" duration="352000" />
-      <workItem from="1685647984163" duration="813000" />
-      <workItem from="1685737656998" duration="3508000" />
-      <workItem from="1685742906668" duration="1324000" />
+      <workItem from="1684360849300" duration="876000" />
+      <workItem from="1684453079799" duration="1138000" />
+      <workItem from="1685742674735" duration="924000" />
+      <workItem from="1685831086847" duration="1888000" />
+      <workItem from="1685909546015" duration="2865000" />
     </task>
-    <task id="LOCAL-00001" summary="Se crea analizador sintactico descendente no recursivo">
-      <created>1684536010941</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1684536010941</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,8 +181,15 @@
       </map>
     </option>
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Se crea analizador sintactico descendente no recursivo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se crea analizador sintactico descendente no recursivo" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mx/ipn/escom/ScannerComponents/AFDs/Numeros.java</url>
+          <line>118</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
