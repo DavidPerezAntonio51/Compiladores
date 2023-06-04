@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1c84f0b-28bf-4278-9285-d6008eba6ed2" name="Changes" comment="se crean los metodos necesarios del parser y se implementan algunos" />
+    <list default="true" id="f1c84f0b-28bf-4278-9285-d6008eba6ed2" name="Changes" comment="se crean los metodos necesarios del parser y se implementan algunos">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,7 +162,7 @@
       <workItem from="1684453079799" duration="1138000" />
       <workItem from="1685742674735" duration="924000" />
       <workItem from="1685831086847" duration="1888000" />
-      <workItem from="1685909546015" duration="3184000" />
+      <workItem from="1685909546015" duration="4201000" />
     </task>
     <task id="LOCAL-00001" summary="se crean los metodos necesarios del parser y se implementan algunos">
       <created>1685915496344</created>

@@ -89,6 +89,8 @@ La gramatica con la que se va a trabajar esta definida de la siguiente manera:
 
 Nota: $\epsilon$ equivale a cadena vacia
 
+### Gramatica
+
 1. **$Q$** -> `select` **$D$** `from` **$T$**
 2. **$D$** -> `distinct` **$P$**
 3. **$D$** -> **$P$**
@@ -188,3 +190,141 @@ Para este analizador necesitaremos el conjunto primero de la grámatica. La gram
              -> `Ɛ`
 
 ---
+
+#### Sentencias
+
+**STATEMENT** -> **EXPR_STMT**  
+-> **FOR_STMT**  
+-> **IF_STMT**  
+-> **PRINT_STMT**  
+-> **RETURN_STMT**  
+-> **WHILE_STMT**  
+-> **BLOCK**
+
+**EXPR_STMT** -> **EXPRESSION** `;`
+
+**FOR_STMT** -> `for` `(` **FOR_STMT_1 FOR_STMT_2 FOR_STMT_3** `)` **STATEMENT**
+
+**FOR_STMT_1** -> **VAR_DECL**  
+-> **EXPR_STMT**  
+-> `;`
+
+**FOR_STMT_2** -> **EXPRESSION** `;`  
+-> `;`
+
+**FOR_STMT_3** -> **EXPRESSION**  
+-> `Ɛ`
+
+**IF_STMT** -> `if` `(`**EXPRESSION**`)` **STATEMENT ELSE_STATEMENT**
+
+**ELSE_STATEMENT** -> `else` **STATEMENT**  
+-> `Ɛ`
+
+**PRINT_STMT** -> `print` **EXPRESSION** `;`
+
+**RETURN_STMT** -> `return` **RETURN_EXP_OPC** `;`
+
+**RETURN_EXP_OPC** -> **EXPRESSION**
+-> `Ɛ`
+
+**WHILE_STMT** -> `while` `(` **EXPRESSION** `)` **STATEMENT**
+
+**BLOCK** -> `{` **BLOCK_DECL** `}`
+
+**BLOCK_DECL** -> **DECLARATION BLOCK_DECL**
+-> `Ɛ`
+
+---
+
+#### Expresiones
+
+**EXPRESSION** -> **ASSIGNMENT**
+
+**ASSIGNMENT** -> **LOGIC_OR ASSIGNMENT_OPC**
+
+**ASSIGNMENT_OPC** -> `=` **EXPRESSION**;  
+-> `Ɛ`
+
+**LOGIC_OR** -> **LOGIC_AND LOGIC_OR_2**
+
+**LOGIC_OR_2** -> `or` **LOGIC_AND LOGIC_OR_2**
+-> `Ɛ`
+
+**LOGIC_AND** -> **EQUALITY LOGIC_AND_2**
+
+**LOGIC_AND_2** -> `and` **EQUALITY LOGIC_AND_2**
+-> `Ɛ`
+
+**EQUALITY** -> **COMPARISON EQUALITY_2**
+
+**EQUALITY_2** -> `!=` **COMPARISON EQUALITY_2**  
+-> `==` **COMPARISON EQUALITY_2**  
+-> `Ɛ`
+
+**COMPARISON** -> **TERM COMPARISON_2**
+
+**COMPARISON_2** -> `>` **TERM COMPARISON_2**  
+-> `>=` **TERM COMPARISON_2**  
+-> `<` **TERM COMPARISON_2**  
+-> `<=` **TERM COMPARISON_2**  
+-> `Ɛ`
+
+**TERM** -> **FACTOR TERM_2**
+
+**TERM_2** -> `-` **FACTOR TERM_2**  
+-> `+` **FACTOR TERM_2**  
+-> `Ɛ`
+
+**FACTOR** -> **UNARY FACTOR_2**
+
+**FACTOR_2** -> `/` **UNARY FACTOR_2**  
+-> `*` **UNARY FACTOR_2**  
+-> `Ɛ`
+
+**UNARY** -> `!` **UNARY**  
+-> `-` **UNARY**  
+-> **CALL**
+
+**CALL** -> **PRIMARY CALL_2**
+
+**CALL_2** -> `(` **ARGUMENTS_OPC** `)` **CALL_2**  
+-> `.` `id` **CALL_2**  
+-> `Ɛ`
+
+**CALL_OPC** -> **CALL** `.`  
+-> `Ɛ`
+
+**PRIMARY** -> `true`  
+-> `false`  
+-> `null`  
+-> `this`  
+-> `number`  
+-> `string`  
+-> `id`  
+-> `(` **EXPRESSION** `)`
+-> `super` `.` `id`
+
+---
+
+#### Otras
+
+**FUNCTION** -> `id` `(` **PARAMETERS_OPC** `)` **BLOCK**
+
+**FUNCTIONS** -> **FUNCTION FUNCTIONS**  
+-> `Ɛ`
+
+**PARAMETERS_OPC** -> **PARAMETERS**
+-> `Ɛ`
+
+**PARAMETERS** -> `id` **PARAMETERS_2**
+
+**PARAMETERS_2** -> `,` `id` **PARAMETERS_2**  
+-> `Ɛ`
+
+**ARGUMENTS_OPC** -> **ARGUMENTS**
+-> `Ɛ`
+
+**ARGUMENTS** -> **EXPRESSION ARGUMENTS_2**
+
+**ARGUMENTS_2** -> `,` **EXPRESSION ARGUMENTS_2**
+-> `Ɛ`
