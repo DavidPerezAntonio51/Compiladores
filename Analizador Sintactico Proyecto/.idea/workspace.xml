@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1c84f0b-28bf-4278-9285-d6008eba6ed2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ParserComponents/ParseException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ParserComponents/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Analizador Sintactico/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Analizador Sintactico/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f1c84f0b-28bf-4278-9285-d6008eba6ed2" name="Changes" comment="se crean los metodos necesarios del parser y se implementan algunos" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -163,8 +159,16 @@
       <workItem from="1684453079799" duration="1138000" />
       <workItem from="1685742674735" duration="924000" />
       <workItem from="1685831086847" duration="1888000" />
-      <workItem from="1685909546015" duration="2865000" />
+      <workItem from="1685909546015" duration="3184000" />
     </task>
+    <task id="LOCAL-00001" summary="se crean los metodos necesarios del parser y se implementan algunos">
+      <created>1685915496344</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685915496344</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +184,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="se crean los metodos necesarios del parser y se implementan algunos" />
+    <option name="LAST_COMMIT_MESSAGE" value="se crean los metodos necesarios del parser y se implementan algunos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

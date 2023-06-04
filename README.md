@@ -81,9 +81,9 @@ Lista de tokens detectados en el analizador léxico:
 | `CADENA` | "Cualquier caracter entre comillas" |
 | `NUMERO` | cualqueir numero entero, flotante o exponencial, positivos o negativos |
 
-## Analizador Sintactico
+## Analizador Sintactico Práctica
 
-En la carpeta `/Analizador Sintctico` se encontrara un **Analizador Sintactico Descendente no recursivo** (predictivo), este analizador se centra en un fragmento de la gramatica de SQL, especificamente nos permite verificar la sintaxis de una sentencia `SELECT`.
+En la carpeta `/Analizador Sintactico` se encontrara un **Analizador Sintactico Descendente no recursivo** (predictivo), este analizador se centra en un fragmento de la gramatica de SQL, especificamente nos permite verificar la sintaxis de una sentencia `SELECT`.
 
 La gramatica con la que se va a trabajar esta definida de la siguiente manera:
 
@@ -154,3 +154,37 @@ Este analizador sintactico descendente utiliza la siguiente tabla de analisis si
 | T1              |          |           |          |          |       | `,` **$T$** | $\epsilon$ |
 | T2              |          |           |          | `id`**$T_3$** |       |       |       |
 | T3              |          |           |          |          |       | `id` | $\epsilon$ |
+
+## Analizador Sintactico Proyecto
+
+En la carpeta `/Analizador Sintactico Proyecto` se encontrara un **Analizador Sintactico Descendente Recursivo** que se encargara del analisis de nuestro lenguaje de programación tomando como entrada la lista de tokens definidos en el analizador léxico.
+
+Para este analizador necesitaremos el conjunto primero de la grámatica. La gramatica es la siguiente:
+
+### Gramática proyecto final
+
+**PROGRAM** -> **DECLARATION**
+
+---
+
+**<center>Declaraciones</center>**
+
+**DECLARATION** -> **CLASS_DECL DECLARATION**  
+                -> **FUN_DECL DECLARATION**  
+                -> **VAR_DECL DECLARATION**  
+                -> **STATEMENT DECLARATION**  
+                -> `Ɛ`
+
+**CLASS_DECL** -> `class` `id` **CLASS_INHER** `{` **FUNCTIONS** `}`
+
+**CLASS_INHER** -> `<` **id**  
+                -> `Ɛ`
+
+**FUN_DECL** -> `fun` **FUNCTION**
+
+**VAR_DECL** -> `var` `id` **VAR_INIT** `;`
+
+**VAR_INIT** -> `=` **EXPRESSION**
+             -> `Ɛ`
+
+---
