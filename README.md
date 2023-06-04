@@ -167,7 +167,7 @@ Para este analizador necesitaremos el conjunto primero de la grámatica. La gram
 
 ---
 
-**<center>Declaraciones</center>**
+#### Declaraciones
 
 **DECLARATION** -> **CLASS_DECL DECLARATION**  
                 -> **FUN_DECL DECLARATION**  
