@@ -186,7 +186,7 @@ Para este analizador necesitaremos el conjunto primero de la grámatica. La gram
 
 **VAR_DECL** -> `var` `id` **VAR_INIT** `;`
 
-**VAR_INIT** -> `=` **EXPRESSION**
+**VAR_INIT** -> `=` **EXPRESSION**  
              -> `Ɛ`
 
 ---
@@ -231,7 +231,7 @@ Para este analizador necesitaremos el conjunto primero de la grámatica. La gram
 
 **BLOCK** -> `{` **BLOCK_DECL** `}`
 
-**BLOCK_DECL** -> **DECLARATION BLOCK_DECL**
+**BLOCK_DECL** -> **DECLARATION BLOCK_DECL**  
 -> `Ɛ`
 
 ---
@@ -301,7 +301,7 @@ Para este analizador necesitaremos el conjunto primero de la grámatica. La gram
 -> `number`  
 -> `string`  
 -> `id`  
--> `(` **EXPRESSION** `)`
+-> `(` **EXPRESSION** `)`  
 -> `super` `.` `id`
 
 ---
@@ -313,7 +313,7 @@ Para este analizador necesitaremos el conjunto primero de la grámatica. La gram
 **FUNCTIONS** -> **FUNCTION FUNCTIONS**  
 -> `Ɛ`
 
-**PARAMETERS_OPC** -> **PARAMETERS**
+**PARAMETERS_OPC** -> **PARAMETERS**  
 -> `Ɛ`
 
 **PARAMETERS** -> `id` **PARAMETERS_2**
@@ -321,10 +321,65 @@ Para este analizador necesitaremos el conjunto primero de la grámatica. La gram
 **PARAMETERS_2** -> `,` `id` **PARAMETERS_2**  
 -> `Ɛ`
 
-**ARGUMENTS_OPC** -> **ARGUMENTS**
+**ARGUMENTS_OPC** -> **ARGUMENTS**  
 -> `Ɛ`
 
 **ARGUMENTS** -> **EXPRESSION ARGUMENTS_2**
 
-**ARGUMENTS_2** -> `,` **EXPRESSION ARGUMENTS_2**
+**ARGUMENTS_2** -> `,` **EXPRESSION ARGUMENTS_2**  
 -> `Ɛ`
+
+### Conjunto Primero de la Gramatica usada
+
+En la siguiente tabla se realiza el calculo del conjunto primero
+
+| No terminal | Conjunto primero a calcular | Conjunto primero |
+|-------------|-----------------------------|-----------------------------|
+|**DECLARATION**| P(CLASS_DECL,FUN_DECL,VAR_DCL,STATEMENT, Ɛ) | `class`,`fun`,`var`, `for`, `if`, `print`, `return`, `while`, `{`, `this`, `super`, `false`, `true`, `null`, `number`, `string`, `(`, `identifier`, `!`, `-`, `Ɛ` |
+|**CLASS_DECL**| ----- | `class` |
+|**FUN_DECL**| ----- | `fun` |
+|**VAR_DECL**| ------ | `var`|
+|**STATEMENT**| P(EXPR_STMT,FOR_STMT,IF_STMT,PRINT_STMT,RETURN_STMT,WHILE_STMT,BLOCK) | `for`,`if`,`print`,`return`,`while`,`{`, `this`, `super`, `false`, `true`, `null`, `number`, `string`, `(`, `identifier`, `!`, `-` |
+|**EXPR_STMT**| P(EXPRESSION) | `this`,`super`,`false`,`true`,`null`,`number`,`string`,`(`, `identifier`, `!`, `-` |
+|**FOR_STMT**| ------ | `for` |
+|**IF_STMT**| ------ | `if` |
+|**PRINT_STMT**| ------ | `print` |
+|**RETURN_STMT**| ------ | `return` |
+|**WHILE_STMT**| ------ | `while` |
+|**BLOCK**| ------| `{` |
+|**EXPRESSION**| P(ASSIGNMENT) | `this`,`super`,`false`,`true`,`null`,`number`,`string`,`(`, `identifier`, `!`, `-` |
+|**ASSIGNMENT**| P(LOGIC_OR) | `this`,`super`,`false`,`true`,`null`,`number`,`string`,`(`, `identifier`, `!`, `-` |
+|**LOGIC_OR**| P(LOGIC_AND) | `this`,`super`,`false`,`true`,`null`,`number`,`string`,`(`, `identifier`, `!`, `-` |
+|**LOGIC_AND**| P(EQUALITY) | `this`,`super`,`false`,`true`,`null`,`number`,`string`,`(`, `identifier`, `!`, `-` |
+|**EQUALITY**| P(COMPARISON) | `this`,`super`,`false`,`true`,`null`,`number`,`string`,`(`, `identifier`, `!`, `-` |
+|**COMPARISON**| P(TERM) | `this`,`super`,`false`,`true`,`null`,`number`,`string`,`(`, `identifier`, `!`, `-` |
+|**TERM**| P(FACTOR) | `this`,`super`,`false`,`true`,`null`,`number`,`string`,`(`, `identifier`, `!`, `-` |
+|**FACTOR**| P(UNARY) | `this`,`super`,`false`,`true`,`null`,`number`,`string`,`(`, `identifier`, `!`, `-` |
+|**UNARY**| P(CALL) | `this`,`super`,`false`,`true`,`null`,`number`,`string`,`(`, `identifier`, `!`, `-` |
+|**CALL**| P(PRIMARY) | `this`,`super`,`false`,`true`,`null`,`number`,`string`,`(`, `identifier` |
+|**PRIMARY**| ------ | `this`,`super`,`false`,`true`,`null`,`number`,`string`,`(`, `identifier` |
+|**FUNCTION**| P(`id`) | `id` |
+|**FUNCTIONS**| P(FUNCTION, Ɛ) | `id`, `Ɛ` |
+|**PARAMETERS_OPC**| P(PARAMETERS, Ɛ) | `id`, `Ɛ` |
+|**PARAMETERS**| P(`id`) | `id` |
+|**PARAMETERS_2**| P(`,`, Ɛ) | `,`, `Ɛ` |
+|**ARGUMENTS_OPC**| P(ARGUMENTS, Ɛ) | `this`,`super`,`false`,`true`,`null`,`number`,`string`,`(`, `identifier`, `!`, `-`, `Ɛ` |
+|**ARGUMENTS**| P(EXPRESSION) | `this`,`super`,`false`,`true`,`null`,`number`,`string`,`(`, `identifier`, `!`, `-`|
+|**ARGUMENTS_2**| P(`,`, Ɛ) | `,`, `Ɛ` |
+|**CLASS_INHER**| P(`<`, Ɛ) | `<`, `Ɛ` |
+|**VAR_INIT**| P(`=`, Ɛ) | `=`, `Ɛ` |
+|**FOR_STMT_1**| P(VAR_DECL, EXPR_STMT, `;`) | `var`, `this`,`super`,`false`,`true`,`null`,`number`,`string`,`(`, `identifier`, `;` |
+|**FOR_STMT_2**| P(EXPRESSION, `;`) | `this`,`super`,`false`,`true`,`null`,`number`,`string`,`(`, `identifier`, `;` |
+|**FOR_STMT_3**| P(EXPRESSION, Ɛ) | `this`,`super`,`false`,`true`,`null`,`number`,`string`,`(`, `identifier`, `Ɛ` |
+|**ELSE_STATEMENT**| P(`else`, Ɛ) | `else`, `Ɛ` |
+|**RETURN_EXP_OPC**| P(EXPRESSION, Ɛ) | `this`,`super`,`false`,`true`,`null`,`number`,`string`,`(`, `identifier`, `Ɛ` |
+|**BLOCK_DECL**| P(DECLARATION, Ɛ) | `class`, `fun`, `var`, `for`, `if`, `print`, `return`, `while`, `{`, `this`,`super`,`false`,`true`,`null`,`number`,`string`,`(`, `identifier`, `!`, `-`, `Ɛ` |
+|**ASSIGNMENT_OPC**| P(`=`, Ɛ) | `=`, `Ɛ` |
+|**LOGIC_OR_2**| P(`or`, Ɛ) | `or`, `Ɛ` |
+|**LOGIC_AND_2**| P(`and`, Ɛ) | `and`, `Ɛ` |
+|**EQUALITY_2**| P(`!=`, `==`, Ɛ) | `!=`, `==`, `Ɛ` |
+|**COMPARISON_2**| P(`>`, `>=`, `<`, `<=`, Ɛ) | `>`, `>=`, `<`, `<=`, `Ɛ` |
+|**TERM_2**| P(`-`, `+`, Ɛ) | `-`, `+`, `Ɛ` |
+|**FACTOR_2**| P(`/`, `*`, Ɛ) | `/`, `*`, `Ɛ` |
+|**CALL_2**| P(`(`, `.`, Ɛ) | `(`, `.`, `Ɛ` |
+|**CALL_OPC**| P(CALL, Ɛ) | `this`,`super`,`false`,`true`,`null`,`number`,`string`,`(`, `identifier`, `Ɛ` |

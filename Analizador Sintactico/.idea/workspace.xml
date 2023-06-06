@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1c84f0b-28bf-4278-9285-d6008eba6ed2" name="Changes" comment="Se crea analizador sintactico descendente no recursivo">
+      <change beforePath="$PROJECT_DIR$/../Analizador Sintactico Proyecto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Analizador Sintactico Proyecto/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Analizador Sintactico Proyecto/src/main/java/mx/ipn/escom/ParserComponents/ParserImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Analizador Sintactico Proyecto/src/main/java/mx/ipn/escom/ParserComponents/ParserImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,6 +170,7 @@
       <workItem from="1685647984163" duration="813000" />
       <workItem from="1685737656998" duration="3508000" />
       <workItem from="1685742906668" duration="1324000" />
+      <workItem from="1686014936451" duration="343000" />
     </task>
     <task id="LOCAL-00001" summary="Se crea analizador sintactico descendente no recursivo">
       <created>1684536010941</created>
