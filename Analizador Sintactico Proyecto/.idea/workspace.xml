@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1c84f0b-28bf-4278-9285-d6008eba6ed2" name="Changes" comment="se implementan nuevos metodos">
-      <change afterPath="$PROJECT_DIR$/src/test/java/mx/ipn/escom/InterpreteTest.java" afterDir="false" />
+    <list default="true" id="f1c84f0b-28bf-4278-9285-d6008eba6ed2" name="Changes" comment="se implementan nuevos metodos y test de acuerdo al documento">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador Sintactico Proyecto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador Sintactico Proyecto.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/Interprete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/Interprete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ParserComponents/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ParserComponents/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ParserComponents/ParserImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/ParserComponents/ParserImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,27 +49,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/OneDrives/GitPersonal/Compiladores/Analizador Sintactico Proyecto&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/OneDrives/GitPersonal/Compiladores/Analizador Sintactico Proyecto",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
   }
-}</component>
+}]]></component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn verify" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.InterpreteTest">
+  <component name="RunManager" selected="Application.InterpreteFile">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -186,7 +178,7 @@
       <workItem from="1685742674735" duration="924000" />
       <workItem from="1685831086847" duration="1888000" />
       <workItem from="1685909546015" duration="15898000" />
-      <workItem from="1685998843852" duration="17363000" />
+      <workItem from="1685998843852" duration="17502000" />
     </task>
     <task id="LOCAL-00001" summary="se crean los metodos necesarios del parser y se implementan algunos">
       <created>1685915496344</created>
@@ -202,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686028238076</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="se implementan nuevos metodos y test de acuerdo al documento">
+      <created>1686033310707</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686033310707</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +221,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="se crean los metodos necesarios del parser y se implementan algunos" />
     <MESSAGE value="se implementan nuevos metodos" />
-    <option name="LAST_COMMIT_MESSAGE" value="se implementan nuevos metodos" />
+    <MESSAGE value="se implementan nuevos metodos y test de acuerdo al documento" />
+    <option name="LAST_COMMIT_MESSAGE" value="se implementan nuevos metodos y test de acuerdo al documento" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1c84f0b-28bf-4278-9285-d6008eba6ed2" name="Changes" comment="Se crea analizador sintactico descendente no recursivo">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/mx/ipn/escom/InterpreteTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Analizador Sintactico Proyecto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Analizador Sintactico Proyecto/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Analizador Sintactico Proyecto/src/main/java/mx/ipn/escom/ParserComponents/ParserImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Analizador Sintactico Proyecto/src/main/java/mx/ipn/escom/ParserComponents/ParserImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analizador Sintactico.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador Sintactico.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/Interprete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mx/ipn/escom/Interprete.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +78,7 @@
       <command value="mvn verify" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Interprete">
+  <component name="RunManager" selected="JUnit.InterpreteTest">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -123,10 +129,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="InterpreteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Analizador Sintactico" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mx.ipn.escom.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mx.ipn.escom" />
+      <option name="MAIN_CLASS_NAME" value="mx.ipn.escom.InterpreteTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Interprete" />
       <item itemvalue="Application.InterpreteFile" />
+      <item itemvalue="JUnit.InterpreteTest" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.InterpreteTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -171,6 +198,7 @@
       <workItem from="1685737656998" duration="3508000" />
       <workItem from="1685742906668" duration="1324000" />
       <workItem from="1686014936451" duration="343000" />
+      <workItem from="1686033403116" duration="425000" />
     </task>
     <task id="LOCAL-00001" summary="Se crea analizador sintactico descendente no recursivo">
       <created>1684536010941</created>

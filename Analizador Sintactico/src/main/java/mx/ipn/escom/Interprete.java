@@ -50,15 +50,17 @@ public class Interprete {
         }
     }
 
-    private static void ejecutar(String source){
+    public static String ejecutar(String source){
         Escaner scanner = new Escaner(source);
         List<Token> tokens = scanner.scanTokens();
         Parser parser = new ParserASD(tokens);
         parser.parse();
         if (parser.esValido()) {
             System.out.println("La consulta es válida.");
+            return "La consulta es válida";
         } else {
             System.out.println("La consulta no es válida.");
+            return "La consulta no es válida";
         }
     }
 
