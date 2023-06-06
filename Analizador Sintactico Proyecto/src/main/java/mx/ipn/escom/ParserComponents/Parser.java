@@ -1,7 +1,7 @@
 package mx.ipn.escom.ParserComponents;
 
 public interface Parser {
-    void parse();
+    String parse();
 
 
 

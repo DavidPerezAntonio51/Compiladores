@@ -15,14 +15,16 @@ public class ParserImpl implements Parser {
         this.currentToken = tokens.get(0);
     }
 
-    public void parse() {
+    public String parse() {
         try {
             parse_program();
             match(TipoToken.EOF);
             System.out.println("Programa válido");
+            return"Programa válido";
         } catch (ParseException e) {
             System.out.println("Programa no válido");
             System.err.println(e.getMessage());
+            return "Programa no válido";
         }
     }
 
@@ -146,10 +148,17 @@ public class ParserImpl implements Parser {
 
     void parse_statement() throws ParseException {
         switch (currentToken.getTipo()) {
-            case PARENTESIS_IZQUIERDO:
+            case THIS:
+            case SUPER:
+            case FALSE:
+            case TRUE:
+            case NULL:
             case NUMERO:
             case CADENA:
+            case PARENTESIS_IZQUIERDO:
             case IDENTIFICADOR:
+            case DIFERENTE:
+            case RESTA:
                 parse_expr_stmt();
                 break;
             case FOR:
@@ -176,31 +185,121 @@ public class ParserImpl implements Parser {
     }
 
     void parse_expr_stmt() throws ParseException {
-        // TODO: implementar según la gramática
+        switch (currentToken.getTipo()) {
+            case THIS:
+            case SUPER:
+            case FALSE:
+            case TRUE:
+            case NULL:
+            case NUMERO:
+            case CADENA:
+            case PARENTESIS_IZQUIERDO:
+            case IDENTIFICADOR:
+            case DIFERENTE:
+            case RESTA:
+                parse_expression();
+                match(TipoToken.PUNTO_Y_COMA);
+                break;
+            default:
+                throw new ParseException("Error en la línea " + currentToken.getLinea() + ". Se esperaba una expresion valida" + currentToken.getTipo());
+        }
     }
 
     void parse_for_stmt() throws ParseException {
-        // TODO: implementar según la gramática
+        match(TipoToken.FOR);
+        match(TipoToken.PARENTESIS_IZQUIERDO);
+        parse_for_stmt_1();
+        parse_for_stmt_2();
+        parse_for_stmt_3();
+        match(TipoToken.PARENTESIS_DERECHO);
+        parse_statement();
     }
 
     void parse_for_stmt_1() throws ParseException {
-        // TODO: implementar según la gramática
+        switch (currentToken.getTipo()) {
+            case VAR:
+                parse_var_decl();
+                break;
+            case THIS:
+            case SUPER:
+            case FALSE:
+            case TRUE:
+            case NULL:
+            case NUMERO:
+            case CADENA:
+            case PARENTESIS_IZQUIERDO:
+            case IDENTIFICADOR:
+            case DIFERENTE:
+            case RESTA:
+                parse_expr_stmt();
+                break;
+            case PUNTO_Y_COMA:
+                match(TipoToken.PUNTO_Y_COMA);
+                break;
+            default:
+                throw new ParseException("Error en la línea " + currentToken.getLinea() + ". Se esperaba una expresion valida" + currentToken.getTipo());
+        }
     }
 
     void parse_for_stmt_2() throws ParseException {
-        // TODO: implementar según la gramática
+        switch (currentToken.getTipo()) {
+            case THIS:
+            case SUPER:
+            case FALSE:
+            case TRUE:
+            case NULL:
+            case NUMERO:
+            case CADENA:
+            case PARENTESIS_IZQUIERDO:
+            case IDENTIFICADOR:
+            case DIFERENTE:
+            case RESTA:
+                parse_expression();
+                match(TipoToken.PUNTO_Y_COMA);
+                break;
+            case PUNTO_Y_COMA:
+                match(TipoToken.PUNTO_Y_COMA);
+                break;
+            default:
+                throw new ParseException("Error en la línea " + currentToken.getLinea() + ". Se esperaba una expresion valida" + currentToken.getTipo());
+        }
     }
 
     void parse_for_stmt_3() throws ParseException {
-        // TODO: implementar según la gramática
+        switch (currentToken.getTipo()) {
+            case THIS:
+            case SUPER:
+            case FALSE:
+            case TRUE:
+            case NULL:
+            case NUMERO:
+            case CADENA:
+            case PARENTESIS_IZQUIERDO:
+            case IDENTIFICADOR:
+            case DIFERENTE:
+            case RESTA:
+                parse_expression();
+                break;
+            default:
+                //Asumimos epsilon
+        }
     }
 
     void parse_if_stmt() throws ParseException {
-        // TODO: implementar según la gramática
+        match(TipoToken.IF);
+        match(TipoToken.PARENTESIS_IZQUIERDO);
+        parse_expression();
+        match(TipoToken.PARENTESIS_DERECHO);
+        parse_statement();
+        parse_else_statement();
     }
 
     void parse_else_statement() throws ParseException {
-        // TODO: implementar según la gramática
+        if(currentToken.getTipo()==TipoToken.ELSE){
+            match(TipoToken.ELSE);
+            parse_statement();
+        }
+        //Asumimos epsilon
     }
 
     void parse_print_stmt() throws ParseException {
@@ -210,15 +309,37 @@ public class ParserImpl implements Parser {
     }
 
     void parse_return_stmt() throws ParseException {
-        // TODO: implementar según la gramática
+        match(TipoToken.RETURN);
+        parse_return_exp_opc();
+        match(TipoToken.PUNTO_Y_COMA);
     }
 
     void parse_return_exp_opc() throws ParseException {
-        // TODO: implementar según la gramática
+        switch (currentToken.getTipo()) {
+            case THIS:
+            case SUPER:
+            case FALSE:
+            case TRUE:
+            case NULL:
+            case NUMERO:
+            case CADENA:
+            case PARENTESIS_IZQUIERDO:
+            case IDENTIFICADOR:
+            case DIFERENTE:
+            case RESTA:
+                parse_expression();
+                break;
+            default:
+                //Asumimos epsilon
+        }
     }
 
     void parse_while_stmt() throws ParseException {
-        // TODO: implementar según la gramática
+        match(TipoToken.WHILE);
+        match(TipoToken.PARENTESIS_IZQUIERDO);
+        parse_expression();
+        match(TipoToken.PARENTESIS_DERECHO);
+        parse_statement();
     }
 
     void parse_block() throws ParseException {
@@ -299,7 +420,11 @@ public class ParserImpl implements Parser {
     }
 
     void parse_assignment_opc() throws ParseException {
-        // TODO: implementar según la gramática
+        if (currentToken.getTipo() == TipoToken.ASIGNAR) {
+            match(TipoToken.ASIGNAR);
+            parse_expression();
+        }
+        //Asumimos epsilon
     }
 
     void parse_logic_or() throws ParseException {
@@ -324,7 +449,12 @@ public class ParserImpl implements Parser {
     }
 
     void parse_logic_or_2() throws ParseException {
-        // TODO: implementar según la gramática
+        if (currentToken.getTipo() == TipoToken.OR) {
+            match(TipoToken.OR);
+            parse_logic_and();
+            parse_logic_or_2();
+        }
+        //Asumimos epsilon
     }
 
     void parse_logic_and() throws ParseException {
@@ -349,7 +479,12 @@ public class ParserImpl implements Parser {
     }
 
     void parse_logic_and_2() throws ParseException {
-        // TODO: implementar según la gramática
+        if (currentToken.getTipo() == TipoToken.AND) {
+            match(TipoToken.AND);
+            parse_equality();
+            parse_logic_and_2();
+        }
+        //Asumimos epsilon
     }
 
     void parse_equality() throws ParseException {
@@ -374,7 +509,20 @@ public class ParserImpl implements Parser {
     }
 
     void parse_equality_2() throws ParseException {
-        // TODO: implementar según la gramática
+        switch (currentToken.getTipo()) {
+            case DIFERENTE:
+                match(TipoToken.DIFERENTE);
+                parse_comparison();
+                parse_equality_2();
+                break;
+            case IGUAL_A:
+                match(TipoToken.IGUAL_A);
+                parse_comparison();
+                parse_equality_2();
+                break;
+            default:
+                //Asumimos epsilon
+        }
     }
 
     void parse_comparison() throws ParseException {
@@ -399,17 +547,26 @@ public class ParserImpl implements Parser {
     }
 
     void parse_comparison_2() throws ParseException {
-        switch (currentToken.getTipo()){
+        switch (currentToken.getTipo()) {
             case MAYOR_QUE:
                 match(TipoToken.MAYOR_QUE);
                 parse_term();
                 parse_comparison_2();
                 break;
             case MAYOR_O_IGUAL:
+                match(TipoToken.MAYOR_O_IGUAL);
+                parse_term();
+                parse_comparison_2();
                 break;
             case MENOR_QUE:
+                match(TipoToken.MENOR_QUE);
+                parse_term();
+                parse_comparison_2();
                 break;
             case MENOR_O_IGUAL:
+                match(TipoToken.MENOR_O_IGUAL);
+                parse_term();
+                parse_comparison_2();
                 break;
             default:
                 //Asumimos epsilon
@@ -438,7 +595,7 @@ public class ParserImpl implements Parser {
     }
 
     void parse_term_2() throws ParseException {
-        switch (currentToken.getTipo()){
+        switch (currentToken.getTipo()) {
             case RESTA:
                 match(TipoToken.RESTA);
                 parse_factor();
@@ -476,7 +633,20 @@ public class ParserImpl implements Parser {
     }
 
     void parse_factor_2() throws ParseException {
-        // TODO: implementar según la gramática
+        switch (currentToken.getTipo()){
+            case DIVISION:
+                match(TipoToken.DIVISION);
+                parse_unary();
+                parse_factor_2();
+                break;
+            case MULTIPLICACION:
+                match(TipoToken.MULTIPLICACION);
+                parse_unary();
+                parse_factor_2();
+                break;
+            default:
+                //Asumimos epsilon
+        }
     }
 
     void parse_unary() throws ParseException {
@@ -525,7 +695,7 @@ public class ParserImpl implements Parser {
     }
 
     void parse_call_2() throws ParseException {
-        switch (currentToken.getTipo()){
+        switch (currentToken.getTipo()) {
             case PARENTESIS_IZQUIERDO:
                 match(TipoToken.PARENTESIS_IZQUIERDO);
                 parse_arguments_opc();
@@ -625,7 +795,7 @@ public class ParserImpl implements Parser {
     }
 
     void parse_arguments_2() throws ParseException {
-        if(currentToken.getTipo()==TipoToken.COMA){
+        if (currentToken.getTipo() == TipoToken.COMA) {
             match(TipoToken.COMA);
             parse_expression();
             parse_arguments_2();
@@ -635,7 +805,8 @@ public class ParserImpl implements Parser {
 
     void match(TipoToken type) throws ParseException {
         if (currentToken.getTipo() == type) {
-            avanzar();
+            if(currentToken.getTipo()!=TipoToken.EOF)
+                avanzar();
         } else {
             throw new ParseException("Error en la línea " + currentToken.getLinea() + ". Se esperaba un " + type + " pero se encontró un " + currentToken.getTipo());
         }

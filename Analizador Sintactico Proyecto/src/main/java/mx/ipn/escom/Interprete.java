@@ -1,5 +1,7 @@
 package mx.ipn.escom;
 
+import mx.ipn.escom.ParserComponents.Parser;
+import mx.ipn.escom.ParserComponents.ParserImpl;
 import mx.ipn.escom.ScannerComponents.Escaner;
 import mx.ipn.escom.ScannerComponents.Token;
 
@@ -48,13 +50,13 @@ public class Interprete {
         }
     }
 
-    private static void ejecutar(String source){
+    //Se cambia a public para testear
+    public static String ejecutar(String source){
         Escaner scanner = new Escaner(source);
         List<Token> tokens = scanner.scanTokens();
 
-        for(Token token : tokens){
-            System.out.println(token);
-        }
+        Parser parser = new ParserImpl(tokens);
+        return parser.parse();
     }
 
     /*

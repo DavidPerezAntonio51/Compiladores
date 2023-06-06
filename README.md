@@ -224,7 +224,7 @@ Para este analizador necesitaremos el conjunto primero de la grámatica. La gram
 
 **RETURN_STMT** -> `return` **RETURN_EXP_OPC** `;`
 
-**RETURN_EXP_OPC** -> **EXPRESSION**
+**RETURN_EXP_OPC** -> **EXPRESSION**  
 -> `Ɛ`
 
 **WHILE_STMT** -> `while` `(` **EXPRESSION** `)` **STATEMENT**
@@ -247,12 +247,12 @@ Para este analizador necesitaremos el conjunto primero de la grámatica. La gram
 
 **LOGIC_OR** -> **LOGIC_AND LOGIC_OR_2**
 
-**LOGIC_OR_2** -> `or` **LOGIC_AND LOGIC_OR_2**
+**LOGIC_OR_2** -> `or` **LOGIC_AND LOGIC_OR_2**  
 -> `Ɛ`
 
 **LOGIC_AND** -> **EQUALITY LOGIC_AND_2**
 
-**LOGIC_AND_2** -> `and` **EQUALITY LOGIC_AND_2**
+**LOGIC_AND_2** -> `and` **EQUALITY LOGIC_AND_2**  
 -> `Ɛ`
 
 **EQUALITY** -> **COMPARISON EQUALITY_2**
